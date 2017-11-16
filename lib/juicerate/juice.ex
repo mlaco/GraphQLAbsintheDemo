@@ -17,6 +17,12 @@ defmodule Juicerate.Juice do
     Repo.all(Juice)
   end
 
+  def create_juice(args) do
+    %Juice{}
+    |> Juice.changeset(args)
+    |> Repo.insert
+  end
+
   @doc false
   def changeset(%Juice{} = juice, attrs) do
     juice
