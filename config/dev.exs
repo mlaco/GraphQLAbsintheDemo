@@ -29,6 +29,16 @@ config :juicerate, JuicerateWeb.Endpoint,
 # configured to run both http and https servers on
 # different ports.
 
+config :juicerate, JuicerateWeb.Endpoint,
+live_reload: [
+  patterns: [
+    ~r{priv/static/.*(js|css|png|jpeg|jpg|gif|svg)$},
+    ~r{priv/gettext/.*(po)$},
+    ~r{lib/juicerate_web/views/.*(ex)$},
+    ~r{lib/juicerate_web/templates/.*(eex)$}
+  ]
+]
+
 # Do not include metadata nor timestamps in development logs
 config :logger, :console, format: "[$level] $message\n"
 

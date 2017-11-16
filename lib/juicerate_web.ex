@@ -34,6 +34,8 @@ defmodule JuicerateWeb do
       # Import convenience functions from controllers
       import Phoenix.Controller, only: [get_flash: 2, view_module: 1]
 
+      use Phoenix.HTML
+
       import JuicerateWeb.Router.Helpers
       import JuicerateWeb.ErrorHelpers
       import JuicerateWeb.Gettext
