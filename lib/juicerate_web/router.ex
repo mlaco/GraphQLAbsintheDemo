@@ -5,9 +5,9 @@ defmodule JuicerateWeb.Router do
     plug :accepts, ["json"]
   end
 
-  forward "/api", Absinthe.Plug,
+  forward "/graphql", Absinthe.Plug,
     schema: JuicerateWeb.Schema
 
-  forward "/graphiql", Absinthe.Plug.GraphqQL,
+  forward "/graphiql", Absinthe.Plug.GraphiQL,
     schema: JuicerateWeb.Schema
 end
