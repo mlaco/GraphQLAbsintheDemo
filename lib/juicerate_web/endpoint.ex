@@ -21,9 +21,12 @@ defmodule JuicerateWeb.Endpoint do
   plug Plug.Logger
 
   plug Plug.Parsers,
-    parsers: [:urlencoded, :multipart, :json],
+    parsers: [:urlencoded, :multipart, :json, Absinthe.Plug.Parser],
     pass: ["*/*"],
     json_decoder: Poison
+
+  plug Absinthe.Plug,
+    schema: Juicerate.Schema
 
   plug Plug.MethodOverride
   plug Plug.Head

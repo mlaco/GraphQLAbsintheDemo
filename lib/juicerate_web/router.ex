@@ -5,7 +5,9 @@ defmodule JuicerateWeb.Router do
     plug :accepts, ["json"]
   end
 
-  scope "/api", JuicerateWeb do
-    pipe_through :api
-  end
+  forward "/api", Absinthe.Plug,
+    schema: JuicerateWeb.Schema
+
+  forward "/graphiql", Absinthe.Plug.GraphqQL,
+    schema: JuicerateWeb.Schema
 end

@@ -13,7 +13,6 @@ config :juicerate,
 config :juicerate, JuicerateWeb.Endpoint,
   url: [host: "localhost"],
   secret_key_base: "SzMtargcq6aPeUqUx2DKbuYbEblcLncfdOn9BcLcJx2oFpEPCCKnIGngWXz22G/m",
-  render_errors: [view: JuicerateWeb.ErrorView, accepts: ~w(json)],
   pubsub: [name: Juicerate.PubSub,
            adapter: Phoenix.PubSub.PG2]
 
