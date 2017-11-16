@@ -34,6 +34,8 @@ defmodule Juicerate.Mixfile do
   defp deps do
     [
       {:absinthe, "~> 1.4"},
+      # {:absinthe_ecto, github: "absinthe-graphql/absinthe_ecto"},
+      # {:absinthe_phoenix, "~> 1.4.0-beta.2"},
       {:absinthe_plug, "~> 1.4"},
       {:phoenix, "~> 1.3.0"},
       {:phoenix_pubsub, "~> 1.0"},
